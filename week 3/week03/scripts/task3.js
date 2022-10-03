@@ -30,7 +30,7 @@ const subtractNumbers = function() {
     let minuend = parseInt(document.querySelector('#minued').value);
     let subtrahend = parseInt(document.querySelector('#subtrahend').value);
     let result = subtract (minuend, subtrahend);
-    document.querySelector("#difference").value = result;
+    document.querySelector('#difference').value = result;
 }
 
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
@@ -55,7 +55,7 @@ function divideNumbers() {
     let dividend = parseInt(document.querySelector('#dividend').value);
     let divisor = parseInt(document.querySelector('#divisor').value);
     let result = divide (dividend, divisor);
-    document.querySelector("#quotient").value = result;
+    document.querySelector('#quotient').value = result;
 }
 
 document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
