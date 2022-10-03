@@ -5,8 +5,8 @@
 // Step 1: Using function declaration, define a function named add that takes two arguments, number1 and number2
 function add(number1, number2) { 
 
-    // Step 2: In the function, return the sum of the parameters number1 and number2
-    return number1 + number2; 
+// Step 2: In the function, return the sum of the parameters number1 and number2
+return number1 + number2; 
 }
 
 // Step 3: Step 3: Using function declaration, define another function named addNumbers that gets the values of two HTML form controls with IDs of addend1 and addend2. Pass them to the add function
@@ -14,9 +14,9 @@ function addNumbers() {
     let addend1 = parselnt(document.querySelector('#addend1').value);
     let addend2 = parselnt(document.querySelector('#addend2').value);
     let result = add(addend1, addend2);
-
+    
     // Step 4: Assign the return value to an HTML form element with an ID of sum
-    return document.querySelector('#sum').value = result;
+    document.querySelector('#sum').value = result;
 }
 
 // Step 5: Add a "click" event listener to the HTML button with an ID of addNumbers that calls the addNumbers function
