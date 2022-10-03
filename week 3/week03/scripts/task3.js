@@ -14,7 +14,7 @@ function addNumbers() {
     let addend1 = parselnt(document.querySelector('#addend1').value);
     let addend2 = parselnt(document.querySelector('#addend2').value);
     let result = add(addend1, addend2);
-    
+
     // Step 4: Assign the return value to an HTML form element with an ID of sum
     document.querySelector('#sum').value = result;
 }
@@ -32,6 +32,7 @@ const subtractNumbers = function() {
     let result = subtract (minuend, subtrahend);
     document.querySelector("#difference").value = result;
 }
+
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
 
 // Step 7: Using arrow functions, repeat Steps 1-5 with new functions named multiply and mulitplyNumbers and HTML form controls with IDs of factor1, factor2, product and multiplyNumbers
@@ -49,12 +50,14 @@ document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNum
 function divide(number1, number2) {
     return number1 / number2;
 }
+
 function divideNumbers() {
     let dividend = parseInt(document.querySelector('#dividend').value);
     let divisor = parseInt(document.querySelector('#divisor').value);
     let result = divide (dividend, divisor);
     document.querySelector("#quotient").value = result;
 }
+
 document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
 
 // Step 9: Test all of the mathematical functionality of the task3.html page.
