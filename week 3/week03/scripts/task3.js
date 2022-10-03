@@ -6,7 +6,7 @@
 function add(number1, number2) { 
 
 // Step 2: In the function, return the sum of the parameters number1 and number2
-return number1 + number2; 
+    return number1 + number2; 
 }
 
 // Step 3: Step 3: Using function declaration, define another function named addNumbers that gets the values of two HTML form controls with IDs of addend1 and addend2. Pass them to the add function
