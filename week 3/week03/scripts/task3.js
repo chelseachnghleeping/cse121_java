@@ -83,10 +83,10 @@ const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,29,20,21,22,23,24,
 document.querySelector('#array').textContent = numbers;
 
 // Step 3: Use the filter array method to find all of the odd numbers of the array variable and assign the reult to the HTML element with an ID of "odds" ( hint: % (modulus operartor) )
-document.querySelector('#odds').textContent = numbers.filter(number => number %2);
+document.querySelector('#odds').textContent = numbers.filter(number => number % 2);
 
 // Step 4: Use the filter array method to find all of the even numbers of the array variable and assign the result to the HTML element with an ID of "evens"
-document.querySelector('#evens').textContent = numbers.filter(number => number %2 === 0);
+document.querySelector('#evens').textContent = numbers.filter(number => number % 2 === 0);
 
 // Step 5: Use the reduce array method to sum the array variable elements and assign the result to the HTML element with an ID of "sumOfArray"
 document.querySelector('#sumOfArray').textContent = numbers.reduce((sum, number) => sum + number, 0);
