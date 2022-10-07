@@ -6,7 +6,7 @@
 let info = {};
 
 // Step 2: Inside of the object, add a property named name with a value of your name as a strininfo 
-info['name'] = "Chelsea Chngh";
+info['name'] = "Chngh Lee Ping";
 
 // Step 3: Add another property named photo with a value of the image path and name (used in Task 2) as a string
 info.photo = "images/me.jpg"
@@ -18,11 +18,11 @@ info.food = ['Curry Chicken', 'Spaghetti', 'Korean BBQ Chicken'],
 info.hobbies = ['Sketching', 'Swimming', 'Teakwondo', 'Hiking', 'Cycling', 'Music'],
 
 // Step 6: Add another property named placesLived with a value of an empty array
-info.placesLived = [];
-info.placesLived.push('Malaysia');
+info.placeLived = [];
+info.placeLived.push('Malaysia');
 
 // Step 7: Inside of the empty array above, add a new object with two properties: place and length and values of an empty string
-info.placesWorked = [//
+info.placesWorked = [
     {
         place: 'Printing Company',
         length: '3 years'
@@ -34,7 +34,7 @@ info.placesWorked = [//
 ]
 
 // Step 8: For each property, add appropriate values as strings
-myInfo.placesWorked.forEach((placeWorked) => {
+info.placesWorked.forEach((placeWorked) => {
     let placesWorkedPlace = document.createElement('dt');
     placesWorkedPlace.textContent = placeWorked.place;
 
@@ -45,31 +45,55 @@ myInfo.placesWorked.forEach((placeWorked) => {
     document.querySelector('#places-worked').appendChild(placesWorkedLength);
 })
 // Step 9: Add additional objects with the same properties for each place you've lived
-myInfo.placesLived.forEach((placesLived) => {
-    let placesLived = document.createElement('dt');
-    placesLived.textContent = placesLived.place;
+info.placeLived.forEach((placeLived) => {
+    let placeLived = document.createElement('dt');
+    placeLived.textContent = placeLived.place;
 
-    document.querySelector('#places-lived').appendChild(placesLived)
+    let placeLivedLength = document.createElement('dd');
+    placeLivedLength.textContent = placeLivedLength
+
+    document.querySelector('#places-lived').appendChild(placeLived)
+    document.querySelector('#places-lived').appendChild(placeLivedLength)
 })
 
 /* OUTPUT */
 
 // Step 1: Assign the value of the name property (of the object declared above) to the HTML <span> element with an ID of name
+document.querySelector('#name').textContent = info.name
 
 // Step 2: Assign the value of the photo property as the src attribute of the HTML <img> element with an ID of photo
+document.querySelector('#photo').setAttribute('src', info.photo);
 
 // Step 3: Assign the value of the name property as the alt attribute of the HTML <img> element with an ID of photo
+document.querySelector('#photo').setAttribute('alt', info.name);
 
 // Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
-
 // Step 5: Append the <li> elements created above as children of the HTML <ul> element with an ID of favorite-foods
+info.favoriteFoods.forEach(food => {
+    let favoriteFoodItem = document.createElement('li');
+    favoriteFoodItem.textContent = food;
+    document.querySelector('#favorite-foods').appendChild(favoriteFoodItem)
+});
 
 // Step 6: Repeat Step 4 for each hobby in the hobbies property
-
 // Step 7: Repeat Step 5 using the HTML <ul> element with an ID of hobbies
+info.hobbies.forEach(hobby => {
+    let hobbyItem = document.createElement('li');
+    hobbyItem.textContent = hobby;
+    document.querySelector('#hobbies').appendChild(hobbyItem)
+});
 
 // Step 8: For each object in the <em>placesLived</em> property:
 // - Create an HTML <dt> element and put its place property in the <dt> element
 // - Create an HTML <dd> element and put its length property in the <dd> element
+info.placeLived.forEach((placeLived) => {
+    let placeLivedItem = document.createElement('li');
+    placeLivedItem.textContent = placeLived.places;
+
+    let placeLivedLength = document.createElement('dd');
+    placeLivedLength.textContent = placeLived.lenght;
 
 // Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
+    document.querySelector('#places-lived').appendChild(placeLivedItem);
+    document.querySelector('#places-lived').appendChild(placeLivedLength);
+}) 
