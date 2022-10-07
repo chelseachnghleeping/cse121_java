@@ -3,26 +3,36 @@
 /* DATA */
 
 // Step 1: Declare a new variable to hold information about yourself
-let info = {};
-
-// Step 2: Inside of the object, add a property named name with a value of your name as a strininfo 
-info['name'] = "Chngh Lee Ping";
-
-// Step 3: Add another property named photo with a value of the image path and name (used in Task 2) as a string
-info.photo = "images/me.jpg"
-
-// Step 4: Add another property named favoriteFoods with a value of an array of your favorite foods as strings ( hint: [] )
-info.food = ['Curry Chicken', 'Spaghetti', 'Korean BBQ Chicken'],
-
-// Step 5: Add another property named hobbies with a value of an array of your hobbies as strings
-info.hobbies = ['Sketching', 'Swimming', 'Teakwondo', 'Hiking', 'Cycling', 'Music'],
+    // Step 2: Inside of the object, add a property named name with a value of your name as a strininfo 
+    // Step 3: Add another property named photo with a value of the image path and name (used in Task 2) as a string
+    // Step 4: Add another property named favoriteFoods with a value of an array of your favorite foods as strings ( hint: [] )
+    // Step 5: Add another property named hobbies with a value of an array of your hobbies as strings
+    let myinfo = {
+        name: ' Chelsea Chngh Lee Ping',
+        photo: 'images/me.jpg',
+        foods: [
+            'Chicken Curry',
+            'Spaghetti',
+            'Korean BBQ Chicken',
+            'Chinese Food'
+        ],
+        hobbies: [
+            'Sketching', 
+            'Swimming', 
+            'Teakwondo', 
+            'Hiking', 
+            'Cycling', 
+            'Music'
+        ]
+    };
 
 // Step 6: Add another property named placesLived with a value of an empty array
-info.placeLived = [];
-info.placeLived.push('Malaysia');
-
+    let place = {
+        placeLived: 'Malaysia'
+    };
+    
 // Step 7: Inside of the empty array above, add a new object with two properties: place and length and values of an empty string
-info.placesWorked = [
+myinfo.placesWorked = [
     {
         place: 'Printing Company',
         length: '3 years'
@@ -34,7 +44,7 @@ info.placesWorked = [
 ]
 
 // Step 8: For each property, add appropriate values as strings
-info.placesWorked.forEach((placeWorked) => {
+myinfo.placesWorked.forEach((placeWorked) => {
     let placesWorkedPlace = document.createElement('dt');
     placesWorkedPlace.textContent = placeWorked.place;
 
@@ -45,7 +55,7 @@ info.placesWorked.forEach((placeWorked) => {
     document.querySelector('#places-worked').appendChild(placesWorkedLength);
 })
 // Step 9: Add additional objects with the same properties for each place you've lived
-info.placeLived.forEach((placeLived) => {
+myinfo.placeLived.forEach((placeLived) => {
     let placeLived = document.createElement('dt');
     placeLived.textContent = placeLived.place;
 
@@ -69,7 +79,7 @@ document.querySelector('#photo').setAttribute('alt', info.name);
 
 // Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
 // Step 5: Append the <li> elements created above as children of the HTML <ul> element with an ID of favorite-foods
-info.favoriteFoods.forEach(food => {
+myinfo.favoriteFoods.forEach(food => {
     let favoriteFoodItem = document.createElement('li');
     favoriteFoodItem.textContent = food;
     document.querySelector('#favorite-foods').appendChild(favoriteFoodItem)
@@ -77,7 +87,7 @@ info.favoriteFoods.forEach(food => {
 
 // Step 6: Repeat Step 4 for each hobby in the hobbies property
 // Step 7: Repeat Step 5 using the HTML <ul> element with an ID of hobbies
-info.hobbies.forEach(hobby => {
+myinfo.hobbies.forEach(hobby => {
     let hobbyItem = document.createElement('li');
     hobbyItem.textContent = hobby;
     document.querySelector('#hobbies').appendChild(hobbyItem)
@@ -86,7 +96,7 @@ info.hobbies.forEach(hobby => {
 // Step 8: For each object in the <em>placesLived</em> property:
 // - Create an HTML <dt> element and put its place property in the <dt> element
 // - Create an HTML <dd> element and put its length property in the <dd> element
-info.placeLived.forEach((placeLived) => {
+myinfo.placeLived.forEach((placeLived) => {
     let placeLivedItem = document.createElement('li');
     placeLivedItem.textContent = placeLived.places;
 
