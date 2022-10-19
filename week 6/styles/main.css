@@ -43,7 +43,7 @@ button {
 
     & + .person {
         margin-top: 20px;
-    }
+    }    
 
     image {
         width: 80px;
